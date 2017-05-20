@@ -11,14 +11,18 @@
 |
 */
 
+Route::resource('category','CategoryController');
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::name('edit_category_path')->post('/category/{id}/edit','CategoryController@edit');
 
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('/home', 'HomeController@index')->name('home');
-    
 });
