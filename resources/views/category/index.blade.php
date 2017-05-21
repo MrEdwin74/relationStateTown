@@ -14,7 +14,7 @@
 				</td>
 				<td style="align: center;width: 200px;">
 				<div class="btn-toolbar">
-					{!!link_to_route('category.edit', $title = 'Edit category', $parameters = $category->id, 
+					{!!link_to_route('edit_category_path', $title = 'Edit category', $parameters = $category->id, 
 					$attributes = ['class'=>'btn btn-success btn-space']);!!}
 					{!!Form::open(['route'=> ['category.destroy',$category->id],'method'=>'DELETE'])!!}
 					{!!Form::submit('Slett',['class'=>'btn btn-danger'])!!}

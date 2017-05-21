@@ -20,6 +20,10 @@ Route::get('/', function () {
 
 Route::name('edit_category_path')->post('/category/{id}/edit','CategoryController@edit');
 
+Route::name('update_category_path')->put('category/{id}','CategoryController@update');
+
+Route::name('category_path')->get('category/{id}','CategoryController@show');
+
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {

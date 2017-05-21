@@ -1,8 +1,9 @@
 @extends('layouts.general')
 @section('content')
 <div class="row">	
-	{!!Form::open(['route'=> ['category.update','category_id' => $category->id],'method'=>'POST'])!!}
+	{!!Form::open(['route'=> ['update_category_path','category_id' => $category->id],'method'=>'POST'])!!}
 	{{ csrf_field() }}
+	{{ method_field('PUT') }}
 	{!!Form::label('Category name:')!!}
 </div>
 <div class="row">
